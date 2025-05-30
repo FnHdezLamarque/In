@@ -1,6 +1,6 @@
 <?php
 require ("conexion.php");
-$query = "SELECT  id_employee, nombre FROM employee;";
+$query = "SELECT  id, nombre FROM employee;";
 $resul = $mysqli->query($query);
 
 $asset = "SELECT asset FROM WhoopIT.material ORDER BY asset DESC LIMIT 1;";

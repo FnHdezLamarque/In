@@ -177,7 +177,7 @@
             <div id="central">
                 <div id="login">
                     <div class="titulo">
-                        Whoop IT
+                        In
                     </div>
 
                     <form action="validar.php" method="post">

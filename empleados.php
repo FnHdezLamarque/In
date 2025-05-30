@@ -1,7 +1,7 @@
 <?php
 	
 	require 'conexion.php';
-	$sql = "SELECT id_employee, nombre, telefono, correo, depto FROM employee";
+	$sql = "SELECT id, nombre, telefono, correo, depto FROM employee";
 	$resultado = $mysqli->query($sql);
 	
 ?>
@@ -23,7 +23,7 @@
 		<script src="js/bootstrap.min.js" ></script>
 		<script src="js/jquery.dataTables.min.js" ></script>
 		
-		<title>Whoop</title>
+		<title>In</title>
 		
 		<script>
 			$(document).ready(function() {
@@ -53,7 +53,7 @@
 		<!-- Tabla empleados -->
 		<div class="container">
 			<div class="row">
-				<h1 style=color:#3282b8>Inventory IT</h1>
+				<h1 style=color:#3282b8>Inventory In</h1>
 			</div>
 			
 			<table id="tableemployee" class="display" style="width:100%">
@@ -71,14 +71,14 @@
 				<tbody>
 					<?php while($fila = $resultado->fetch_assoc()) { ?>
 						<tr>
-							<td><?php echo $fila['id_employee']; ?></td>
+							<td><?php echo $fila['id']; ?></td>
 							<td><?php echo $fila['nombre']; ?></td>
 							<td><?php echo $fila['telefono']; ?></td>
 							<td><?php echo $fila['correo']; ?></td>
 							<td><?php echo $fila['depto']; ?></td>
-							<td><a href="editar.php?id_employee=<?php echo $fila['id_employee']; ?>" class="btn btn-outline-warning" >Edit</a> </td>
+							<td><a href="editar.php?id=<?php echo $fila['id']; ?>" class="btn btn-outline-warning" >Edit</a> </td>
 							<i class="fa-light fa-trash"></i>
-							<!--<td><a href="eliminar.php?id_employee=<?php echo $fila['id_employee']; ?>" class="btn btn-outline-danger">Disable</a> </td>-->
+							<!--<td><a href="eliminar.php?id_employee=<?php echo $fila['id']; ?>" class="btn btn-outline-danger">Disable</a> </td>-->
 						</tr>
 					<?php } ?>
 				</tbody>
